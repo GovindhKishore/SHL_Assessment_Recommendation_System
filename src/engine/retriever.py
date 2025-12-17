@@ -15,22 +15,29 @@ class Retriever:
     """
     def __init__(self):
         """Initialize the retriever with ChromaDB and embedding function."""
-        if not os.path.exists(DB_PATH):
-            raise FileNotFoundError(f"ChromaDB path not found at {DB_PATH}.")
+        try:
+            if not os.path.exists(DB_PATH):
+                raise FileNotFoundError(f"ChromaDB path not found at {DB_PATH}.")
 
-        # Connect to the persistent ChromaDB
-        self.client = chromadb.PersistentClient(DB_PATH)
+            # Connect to the persistent ChromaDB
+            self.client = chromadb.PersistentClient(DB_PATH)
 
-        # Initialize the embedding function with a sentence transformer model
-        self.embed_func = embedding_functions.SentenceTransformerEmbeddingFunction(
-            model_name="all-MiniLM-L6-v2"
-        )
+            # Initialize the embedding function with a sentence transformer model
+            self.embed_func = embedding_functions.SentenceTransformerEmbeddingFunction(
+                model_name="all-MiniLM-L6-v2"
+            )
 
-        # Get the collection with the embedding function
-        self.collection = self.client.get_collection(
-            name=COLLECTION_NAME,
-            embedding_function=self.embed_func
-        )
+            # Get the collection with the embedding function
+            try:
+                self.collection = self.client.get_collection(
+                    name=COLLECTION_NAME,
+                    embedding_function=self.embed_func
+                )
+            except Exception as e:
+                raise RuntimeError(f"Failed to get collection: {str(e)}")
+
+        except Exception as e:
+            raise RuntimeError(f"Failed to initialize retriever: {str(e)}")
 
     def search(self, query, n_results=15):
         """
