@@ -1,20 +1,24 @@
 import streamlit as st
 import os
 import sys
+from pathlib import Path
 
-# Add project root to path for imports
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+# Fix: Get the absolute path of the directory 2 levels above this file
+# This turns /mount/src/your-repo/src/ui/ into /mount/src/your-repo/
+project_root = str(Path(__file__).resolve().parent.parent.parent)
 
-# Import engine components with error handling
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+# Now try the imports
 try:
     from src.engine.retriever import Retriever
     from src.engine.llm_handler import LLMHandler
+    from src.engine.vector_store import initialize_vector_store, DB_PATH
     HAS_ENGINE = True
-except ImportError:
+except ImportError as e:
+    st.error(f"Import Error: {e}")
     HAS_ENGINE = False
-    # Ensure names exist even if imports fail (avoids linter/runtime name errors)
-    Retriever = None
-    LLMHandler = None
 
 # Import vector_store components for database initialization (optional override supported)
 try:
