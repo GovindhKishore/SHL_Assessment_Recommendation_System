@@ -5,9 +5,6 @@ import sys
 # Add project root to path for imports
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
-# Import vector_store components for database initialization
-from src.engine.vector_store import initialize_vector_store, DB_PATH
-
 # Import engine components with error handling
 try:
     from src.engine.retriever import Retriever
@@ -25,35 +22,10 @@ def load_engine():
     Returns:
         tuple: (Retriever, LLMHandler) or (None, None) if engine not available
     """
-    try:
-        # Try to initialize the retriever to check if the database is accessible
-        retriever = Retriever()
-        # If we get here, the database is accessible
-        if HAS_ENGINE:
-            return retriever, LLMHandler()
-    except Exception as e:
-        # If there's an error (like FileNotFoundError or database corruption)
-        st.warning(f"Database issue detected: {str(e)}")
-        st.info("Rebuilding vector database... This may take a minute.")
-        try:
-            # Try to rebuild the database
-            initialize_vector_store()
-            st.success("Database rebuilt successfully!")
-            if HAS_ENGINE:
-                return Retriever(), LLMHandler()
-        except Exception as rebuild_error:
-            st.error(f"Failed to rebuild database: {str(rebuild_error)}")
-
+    if HAS_ENGINE:
+        return Retriever(), LLMHandler()
     return None, None
 
-
-# Ensure the database directory exists
-os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-
-# Check if database exists and show a message if it needs to be rebuilt
-db_file = os.path.join(DB_PATH, "chroma.sqlite3")
-if not os.path.exists(db_file):
-    st.info("Database not found. It will be automatically rebuilt when you search.")
 
 # Initialize engine components
 retriever, llm = load_engine()

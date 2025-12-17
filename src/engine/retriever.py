@@ -2,8 +2,13 @@ import chromadb
 from chromadb.utils import embedding_functions
 import os
 
-# Path to the ChromaDB database and collection name
-DB_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "data", "embeddings", "chroma_db")
+ROOT_DIR = os.getcwd() 
+
+# Force the path starting from the root
+DB_PATH = os.path.join(ROOT_DIR, "data", "embeddings", "chroma_db")
+
+# Add this print so you can see the path in the Render logs
+print(f"--- ATTEMPTING TO LOAD DB FROM: {DB_PATH} ---")
 COLLECTION_NAME = "shl_assessments"
 
 class Retriever:
@@ -15,29 +20,22 @@ class Retriever:
     """
     def __init__(self):
         """Initialize the retriever with ChromaDB and embedding function."""
-        try:
-            if not os.path.exists(DB_PATH):
-                raise FileNotFoundError(f"ChromaDB path not found at {DB_PATH}.")
+        if not os.path.exists(DB_PATH):
+            raise FileNotFoundError(f"ChromaDB path not found at {DB_PATH}.")
 
-            # Connect to the persistent ChromaDB
-            self.client = chromadb.PersistentClient(DB_PATH)
+        # Connect to the persistent ChromaDB
+        self.client = chromadb.PersistentClient(DB_PATH)
 
-            # Initialize the embedding function with a sentence transformer model
-            self.embed_func = embedding_functions.SentenceTransformerEmbeddingFunction(
-                model_name="all-MiniLM-L6-v2"
-            )
+        # Initialize the embedding function with a sentence transformer model
+        self.embed_func = embedding_functions.SentenceTransformerEmbeddingFunction(
+            model_name="all-MiniLM-L6-v2"
+        )
 
-            # Get the collection with the embedding function
-            try:
-                self.collection = self.client.get_collection(
-                    name=COLLECTION_NAME,
-                    embedding_function=self.embed_func
-                )
-            except Exception as e:
-                raise RuntimeError(f"Failed to get collection: {str(e)}")
-
-        except Exception as e:
-            raise RuntimeError(f"Failed to initialize retriever: {str(e)}")
+        # Get the collection with the embedding function
+        self.collection = self.client.get_collection(
+            name=COLLECTION_NAME,
+            embedding_function=self.embed_func
+        )
 
     def search(self, query, n_results=15):
         """
