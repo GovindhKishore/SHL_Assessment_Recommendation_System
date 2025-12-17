@@ -31,8 +31,8 @@ class LLMHandler:
         genai.configure(api_key=GEMINI_API_KEY)
 
         # Initialize the Gemini model
-        self.model = genai.GenerativeModel('models/gemma-3-4b-it')
-        print("Connected to Gemini LLM (Gemma-3-4b-it) for reranking.")
+        self.model = genai.GenerativeModel('models/gemini-2.5-flash')
+        print("Connected to Gemini LLM (gemini-2.5-flash) for reranking.")
 
     def rerank(self, query, results):
         """

@@ -97,7 +97,7 @@ def calculate_metrics():
 
         # Query the API
         try:
-            response = requests.post(API_URL, json={"query": query}, timeout=10)
+            response = requests.post(API_URL, json={"query": query}, timeout=50)
         except Exception as e:
             print(f"Request Error for query {idx+1}: {e}")
             continue

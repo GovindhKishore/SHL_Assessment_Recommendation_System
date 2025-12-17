@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0ad9a88-9f1b-461b-a98e-aee2b375d55a" name="Changes" comment="Commited the final project" />
+    <list default="true" id="f0ad9a88-9f1b-461b-a98e-aee2b375d55a" name="Changes" comment="Commited the final project">
+      <change afterPath="$PROJECT_DIR$/data/embeddings/chroma_db/c7d032ed-e27b-48c1-a3b9-27e7a3cda5c1/length.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/embeddings/chroma_db/91e15640-84e9-4aa4-9d51-2d52754e4e3f/data_level0.bin" beforeDir="false" afterPath="$PROJECT_DIR$/data/embeddings/chroma_db/c7d032ed-e27b-48c1-a3b9-27e7a3cda5c1/data_level0.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/embeddings/chroma_db/91e15640-84e9-4aa4-9d51-2d52754e4e3f/header.bin" beforeDir="false" afterPath="$PROJECT_DIR$/data/embeddings/chroma_db/c7d032ed-e27b-48c1-a3b9-27e7a3cda5c1/header.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/embeddings/chroma_db/91e15640-84e9-4aa4-9d51-2d52754e4e3f/length.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/embeddings/chroma_db/91e15640-84e9-4aa4-9d51-2d52754e4e3f/link_lists.bin" beforeDir="false" afterPath="$PROJECT_DIR$/data/embeddings/chroma_db/c7d032ed-e27b-48c1-a3b9-27e7a3cda5c1/link_lists.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/embeddings/chroma_db/chroma.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/data/embeddings/chroma_db/chroma.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluations/calculate_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluations/calculate_metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluations/final_submission_predictions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/evaluations/final_submission_predictions.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/llm_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/llm_handler.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +58,7 @@
     "Python.calculate_metrics.executor": "Run",
     "Python.crawler.executor": "Run",
     "Python.debug_data.executor": "Run",
+    "Python.evaluate_predictions.executor": "Run",
     "Python.extract_data.executor": "Run",
     "Python.gemini_models_check.executor": "Run",
     "Python.llm_handler.executor": "Run",
@@ -92,7 +105,7 @@
       <workItem from="1765947009534" duration="19087000" />
       <workItem from="1765970219437" duration="7223000" />
       <workItem from="1765989731537" duration="79000" />
-      <workItem from="1765990167252" duration="2459000" />
+      <workItem from="1765990167252" duration="6438000" />
     </task>
     <task id="LOCAL-00001" summary="Commited the final project">
       <option name="closed" value="true" />
@@ -110,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765992640748</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commited the final project">
+      <option name="closed" value="true" />
+      <created>1765992754454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765992754455</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,16 +142,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="Commited the final project" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$retriever.coverage" NAME="retriever Coverage Results" MODIFIED="1765990305547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/engine" />
-    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$vector_store.coverage" NAME="vector_store Coverage Results" MODIFIED="1765990211247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/engine" />
-    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$parser.coverage" NAME="parser Coverage Results" MODIFIED="1765866631514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$calculate_metrics.coverage" NAME="calculate_metrics Coverage Results" MODIFIED="1765990416185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluations" />
-    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$extract_data.coverage" NAME="extract_data Coverage Results" MODIFIED="1765956650725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluations" />
-    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$debug_data.coverage" NAME="debug_data Coverage Results" MODIFIED="1765962081419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$calculate_metrics.coverage" NAME="calculate_metrics Coverage Results" MODIFIED="1765996376330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluations" />
     <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$gemini_models_check.coverage" NAME="gemini_models_check Coverage Results" MODIFIED="1765972877252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$streamlit_app.coverage" NAME="streamlit_app Coverage Results" MODIFIED="1765977289517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
     <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$crawler.coverage" NAME="crawler Coverage Results" MODIFIED="1765912992256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/crawler" />
-    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$llm_handler.coverage" NAME="llm_handler Coverage Results" MODIFIED="1765974101259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/engine" />
-    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$main.coverage" NAME="main Coverage Results" MODIFIED="1765990385104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/api" />
+    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$evaluate_predictions.coverage" NAME="evaluate_predictions Coverage Results" MODIFIED="1765996509378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluations" />
+    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$retriever.coverage" NAME="retriever Coverage Results" MODIFIED="1765994913448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/engine" />
+    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$vector_store.coverage" NAME="vector_store Coverage Results" MODIFIED="1765994622613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/engine" />
+    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$parser.coverage" NAME="parser Coverage Results" MODIFIED="1765866631514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$debug_data.coverage" NAME="debug_data Coverage Results" MODIFIED="1765962081419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$extract_data.coverage" NAME="extract_data Coverage Results" MODIFIED="1765956650725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluations" />
+    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$streamlit_app.coverage" NAME="streamlit_app Coverage Results" MODIFIED="1765977289517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
+    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$llm_handler.coverage" NAME="llm_handler Coverage Results" MODIFIED="1765996164705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/engine" />
+    <SUITE FILE_PATH="coverage/_SHL_Assessment_Recommendation_System$main.coverage" NAME="main Coverage Results" MODIFIED="1765996316613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/api" />
   </component>
 </project>
